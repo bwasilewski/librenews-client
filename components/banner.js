@@ -6,6 +6,7 @@ export default function Banner () {
 		<nav className={styles.banner}>
 			<Link href="/">LibreNews</Link>
 			<Link href="/about">About</Link>
+			<Link href="/sources">Sources</Link>
 			<Link href="https://liberapay.com/bwasilewski/donate">Donate</Link>
 		</nav>
 	)
