@@ -2,14 +2,43 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+li > a {
+  display: block;
+  white-space: nowrap;
+  width: 600px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+:link { color: #0000EE; }
+:visited { color: #551A8B; }
 
 * {
   box-sizing: border-box;
