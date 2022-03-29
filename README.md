@@ -2,10 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Todo
 
-- [] Set up analytics
-- [] Add category filters
-- [] Organize headlines by source
-- [] Organize headlines by category
+- [ ] Set up analytics
+- [ ] Add category filters
+- [ ] Organize headlines by source
+- [ ] Organize headlines by category
 
 
 ## Getting Started
