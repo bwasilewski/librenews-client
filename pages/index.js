@@ -15,7 +15,7 @@ function Home({ headlines }) {
         <h2>Free News Forever</h2>
 
         <ul>
-          { headlines.results.map(result => (
+          { headlines.map(result => (
             <li key={result.link}>
               <a title={result.description} href={result.link}>{result.title}</a>
               <small><em> <a href="">{result.source_id}</a> </em></small>
