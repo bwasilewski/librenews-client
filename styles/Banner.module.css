@@ -1,0 +1,23 @@
+.banner {
+	border-bottom: 1px solid #ccc;
+	position: sticky;
+	top: 0;
+	background: white;
+	z-index: 2;
+}
+
+.banner ul {
+	margin: 0;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.banner	ul li {
+	display: inline-block;
+	width: auto;
+	padding: 5px;
+}
+
+.banner ul li:first-child {
+	padding-left: 0;
+}
