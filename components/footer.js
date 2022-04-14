@@ -1,8 +1,10 @@
+import Signup from './signup'
 import styles from '../styles/footer.module.css'
 
 export default function Footer() {
 	return (
 		<footer className={styles.footer}>
+			<Signup />
 			<ul>
 				<li>
 					<a href="https://liberapay.com/bwasilewski/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" /></a>
