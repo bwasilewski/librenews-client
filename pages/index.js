@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Headlines from '../components/headlines'
 import styles from '../styles/Home.module.css'
 
-function Home({ headlines }) {
+function Home({ headlines, sources }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,16 +12,19 @@ function Home({ headlines }) {
       </Head>
 
       <main className={styles.main}>
-        { headlines && <Headlines items={headlines} /> }
+        { headlines && <Headlines headlines={headlines} /> }
       </main>
     </div>
   )
 }
 
 Home.getInitialProps = async (ctx) => {
-  const res = await fetch(`http://localhost:3000/v1/headlines/fetch?size=20`)
-  const json = await res.json()
-  return { headlines: json }
+  const response = await fetch(
+    `http://localhost:3000/v1/headlines/fetch?size=20`)
+
+  return { 
+    headlines: await response.json(),
+  }
 }
 
 export default Home
