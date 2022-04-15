@@ -20,7 +20,7 @@ function Home({ headlines, sources }) {
 
 Home.getInitialProps = async (ctx) => {
   const response = await fetch(
-    `http://localhost:3000/v1/headlines/fetch?size=20`)
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/fetch?size=20`)
 
   return { 
     headlines: await response.json(),

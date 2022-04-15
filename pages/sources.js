@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 function Sources({ sources }) {
-	console.log('Sources: ', sources)
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +28,7 @@ function Sources({ sources }) {
 }
 
 Sources.getInitialProps = async (ctx) => {
-  const res = await fetch(`${process.env.BACKEND_URL}/v1/sources/fetch`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/sources/fetch`)
   const json = await res.json()
   return { sources: json }
 }
