@@ -1,5 +1,5 @@
 import Signup from './signup'
-import styles from '../styles/footer.module.css'
+import styles from '../styles/Footer.module.css'
 
 export default function Footer() {
 	return (
