@@ -12,7 +12,7 @@ const HeadlineItem = ({headline}) => {
 			<a 
 				onClick={handleClick} 
 				title={headline.description} 
-				href={headline.link} target="_blank">{headline.title}
+				href={headline.link} rel="noreferrer" target="_blank">{headline.title}
 			</a>
 
 			<small>
