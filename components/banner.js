@@ -1,13 +1,26 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Banner.module.css'
 
 export default function Banner () {
 	return (
 		<nav className={styles.banner}>
-			<Link href="/">LibreNews</Link>
-			<Link href="/about">About</Link>
-			<Link href="/sources">Sources</Link>
-			<Link href="https://liberapay.com/bwasilewski/donate">Donate</Link>
+			<ul>
+				<li>
+					<Link href="/">LibreNews</Link>
+				</li>
+				<li>
+					<Link href="/about">About</Link>
+				</li>
+				<li>
+					<Link href="/sources">Sources</Link>
+				</li>
+				<li>
+					<Link href="/donate">Donate</Link>
+				</li>
+				<li>
+				</li>
+			</ul>
 		</nav>
 	)
 }
