@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Todo
 
 - [ ] Set up analytics
+- [ ] Add Google AdSense
 - [ ] Add category filters
 - [ ] Organize headlines by source
 - [ ] Organize headlines by category
