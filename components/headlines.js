@@ -3,7 +3,7 @@ import styles from '../styles/Banner.module.css'
 import moment from 'moment'
 
 const handleClick = ev => {
-	console.log(ev)
+	// console.log(ev)
 }
 
 const HeadlineItem = ({headline}) => {
