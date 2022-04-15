@@ -18,20 +18,6 @@ a:hover {
   text-decoration: underline;
 }
 
-li {
-  padding: 5px;
-  margin: 0 auto;
-}
-
-li > a {
-  display: block;
-  white-space: nowrap;
-  width: 600px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-weight: bold;
-}
-
 ul {
   padding-left: 0;
   list-style-type: none;

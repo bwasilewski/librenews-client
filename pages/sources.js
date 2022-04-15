@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-function Home({ sources }) {
+function Sources({ sources }) {
 	console.log('Sources: ', sources)
   return (
     <div className={styles.container}>
@@ -16,7 +16,7 @@ function Home({ sources }) {
         <h2>Sources</h2>
 
         <ul>
-          { sources.results.map(result => (
+          { sources.map(result => (
             <li key={result.id}>
               <a href={result.url}>{result.name}</a>
             </li>
@@ -28,10 +28,10 @@ function Home({ sources }) {
   )
 }
 
-Home.getInitialProps = async (ctx) => {
-  const res = await fetch(`http://localhost:3000/v1/sources`)
+Sources.getInitialProps = async (ctx) => {
+  const res = await fetch(`${process.env.BACKEND_URL}/v1/sources/fetch`)
   const json = await res.json()
   return { sources: json }
 }
 
-export default Home
+export default Sources
