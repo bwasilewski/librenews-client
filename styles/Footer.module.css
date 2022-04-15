@@ -1,9 +1,11 @@
 .footer {
   position: sticky;
+  padding: 5px;
   bottom: 0;
   z-index: 2;
   background: white;
   border-top: 1px solid #ccc;
+  text-align: center;
 }
 
 .footer a {
@@ -21,5 +23,4 @@
 
 .footer small {
   display: block;
-  margin-top: 10px;
 }
