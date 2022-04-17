@@ -13,10 +13,8 @@ function Donate() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Libre News</h1>
-        <h2>Donate</h2>
-
-				<Link href="https://liberapay.com/bwasilewski/donate">
+        <p>Donations pay for server time and data access. Thank you so much for your contribution!</p>
+				<Link href="https://liberapay.com/bwasilewski/donate" passHref>
 					<Image 
 						alt="Donate using Liberapay" 
 						src="https://liberapay.com/assets/widgets/donate.svg" 
