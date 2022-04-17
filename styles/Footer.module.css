@@ -1,10 +1,9 @@
 .footer {
   position: sticky;
-  padding: 5px;
+  padding: 10px;
   bottom: 0;
   z-index: 2;
-  background: white;
-  border-top: 1px solid #ccc;
+  background-color: var(--background);
   text-align: center;
 }
 

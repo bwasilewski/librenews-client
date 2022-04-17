@@ -1,21 +1,39 @@
-html,
+:root {
+  --background: #F0FFF0;
+  --visitedlinktext: #008000; 
+  --hoverlinktext: #008000;
+  --linktext: #005000;
+  --headertext: #005000;
+  --bodytext: #005000;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
+  background-color: var(--background);
+  color: var(--bodytext);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--headertext);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  color: var(--bodytext);
+  transition: color .5s;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--hoverlinktext);
 }
 
 ul {
@@ -23,8 +41,10 @@ ul {
   list-style-type: none;
 }
 
-:link { color: #0000EE; }
-:visited { color: #551A8B; }
+:link { color: var(--linktext); }
+:visited { 
+  color: var(--visitedlinktext); 
+}
 
 * {
   box-sizing: border-box;

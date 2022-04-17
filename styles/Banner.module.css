@@ -1,23 +1,18 @@
 .banner {
-	border-bottom: 1px solid #ccc;
+	background-color: var(--background);
 	position: sticky;
 	top: 0;
-	background: white;
 	z-index: 2;
+	display: flex;
 }
 
 .banner ul {
 	margin: 0;
-	width: 800px;
-	margin: 0 auto;
 }
 
 .banner	ul li {
 	display: inline-block;
 	width: auto;
-	padding: 5px;
-}
-
-.banner ul li:first-child {
-	padding-left: 0;
+	padding: 10px;
+	font-weight: bold;
 }
