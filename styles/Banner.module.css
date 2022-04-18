@@ -38,6 +38,12 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.banner ul {
+		height: 63px;
+	}
+}
+
 @media (min-width: 768px) {
 	.banner {
 		width: 730px;
