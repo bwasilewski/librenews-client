@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import styles from '../styles/Banner.module.css'
 import moment from 'moment'
+import { useMatomo } from '@datapunt/matomo-tracker-react'
 
 const handleClick = ev => {
 	// console.log(ev)
+	trackEvent({ category: 'headline', action: 'headline-click' })
 }
 
 const HeadlineItem = ({headline}) => {
+	const { trackEvent } = useMatomo()
+
 	return (
 		<li>
 			<a 
