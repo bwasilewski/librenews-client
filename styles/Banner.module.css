@@ -26,12 +26,11 @@
 	}
 
 	.banner ul {
-		height: 38px;
 		overflow: hidden;
 	}
 
 	.banner ul li {
-		padding: 10px 0;
+		padding: 20px 0;
 	}
 
 	.bannerMobile {

@@ -25,7 +25,8 @@
 }
 
 .main li {
-  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
 }
 
 .main li > a {
@@ -144,9 +145,9 @@
   }
 
   .main li > a {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     width: 700px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
   }
 } 
