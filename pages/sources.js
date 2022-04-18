@@ -1,10 +1,11 @@
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 function Sources({ sources }) {
   const { trackPageView } = useMatomo()
 
-  React.useEffect(() => {
+  useEffect(() => {
     trackPageView()
   }, [trackPageView])
 
