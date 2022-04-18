@@ -15,12 +15,12 @@ export default function Banner () {
 					<Link href="/sources">Sources</Link>
 				</li>
 				<li>
-					<Link href="/donate">Donate</Link>
+					<a target="_blank" rel="noreferrer" href="https://liberapay.com/bwasilewski/donate">Donate</a>
 				</li>
 			</ul>
 			<ul className={styles.bannerMobile}>
 				<li>
-					<Link href="/donate">Donate</Link>
+					<a target="_blank" rel="noreferrer" href="https://liberapay.com/bwasilewski/donate">Donate</a>
 				</li>
 			</ul>
 		</nav>
