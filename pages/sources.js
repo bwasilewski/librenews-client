@@ -6,7 +6,7 @@ function Sources({ sources }) {
 
   React.useEffect(() => {
     trackPageView()
-  })
+  }, [trackPageView])
 
   return (
     <div className={styles.container}>

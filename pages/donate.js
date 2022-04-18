@@ -9,7 +9,7 @@ function Donate() {
 
   React.useEffect(() => {
     trackPageView()
-  })
+  }, [trackPageView])
 
   return (
     <div className={styles.container}>

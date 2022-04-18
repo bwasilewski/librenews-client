@@ -8,7 +8,7 @@ function Home({ headlines, sources }) {
 
   React.useEffect(() => {
     trackPageView()
-  }, [])
+  }, [trackPageView])
 
   return (
     <div className={styles.container}>

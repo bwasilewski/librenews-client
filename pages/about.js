@@ -9,7 +9,7 @@ function About() {
 
   React.useEffect(() => {
     trackPageView()
-  }, [])
+  }, [trackPageView])
 
   return (
     <div className={styles.container}>
