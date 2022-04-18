@@ -17,7 +17,6 @@
 
 .main {
   min-height: 100vh;
-  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -26,7 +25,6 @@
 }
 
 .main li {
-  padding: 5px;
   margin: 0 auto;
 }
 
@@ -141,6 +139,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .main {
+    padding: 2rem 0;
+  }
+
   .main li > a {
     white-space: nowrap;
     width: 700px;

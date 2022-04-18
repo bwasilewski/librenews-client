@@ -17,7 +17,10 @@ export default function Banner () {
 				<li>
 					<Link href="/donate">Donate</Link>
 				</li>
+			</ul>
+			<ul className={styles.bannerMobile}>
 				<li>
+					<Link href="/donate">Donate</Link>
 				</li>
 			</ul>
 		</nav>
