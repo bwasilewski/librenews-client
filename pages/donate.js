@@ -2,8 +2,15 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useMatomo } from '@datapunt/matomo-tracker-react'
 
 function Donate() {
+  const { trackPageView } = useMatomo()
+
+  React.useEffect(() => {
+    trackPageView()
+  })
+
   return (
     <div className={styles.container}>
       <Head>
