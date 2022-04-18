@@ -21,7 +21,9 @@
 	.banner {
 		padding: 0 2rem;
 	}
-	.banner ul li:first-child {
-		padding-left: 0;
+
+	.banner ul li {
+		font-size: 16px;
+		padding: 10px;
 	}
 }
