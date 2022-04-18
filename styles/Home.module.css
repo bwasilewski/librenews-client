@@ -32,11 +32,12 @@
 
 .main li > a {
   display: block;
-  white-space: nowrap;
-  width: 800px;
-  text-overflow: ellipsis;
-  overflow: hidden;
   font-weight: bold;
+}
+
+.main li small {
+  margin-right: 10px;
+  display: inline-block;
 }
 
 .navlist {
@@ -123,9 +124,27 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+
+  .main li {
+    margin-bottom: 30px;
+  }
+
+  .main li > a {
+    margin-bottom: 10px;
+  }
+
 }
+
+@media only screen and (min-width: 768px) {
+  .main li > a {
+    white-space: nowrap;
+    width: 700px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+} 
