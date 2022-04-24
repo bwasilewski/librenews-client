@@ -12,9 +12,6 @@ export default function Banner () {
 					<Link href="/about">About</Link>
 				</li>
 				<li>
-					<Link href="/sources">Sources</Link>
-				</li>
-				<li>
 					<a target="_blank" rel="noreferrer" href="https://liberapay.com/bwasilewski/donate">Donate</a>
 				</li>
 			</ul>
