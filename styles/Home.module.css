@@ -15,6 +15,23 @@
   padding: 0 2rem;
 }
 
+.grid {
+  display: table;
+  width: 100%;
+}
+
+.column_1 {
+  display: table-cell;
+  width: 25%;
+  padding: 20px;
+}
+
+.column_2 {
+  display: table-cell;
+  width: 75%;
+  padding: 20px;
+}
+
 .main {
   min-height: 100vh;
   flex: 1;
@@ -81,11 +98,11 @@
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* max-width: 800px; */
 }
 
 .card {
@@ -146,7 +163,7 @@
 
   .main li > a {
     /* white-space: nowrap; */
-    width: 700px;
+    /* width: 700px; */
     /* text-overflow: ellipsis; */
     /* overflow: hidden; */
   }

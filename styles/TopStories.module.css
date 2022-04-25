@@ -1,0 +1,30 @@
+
+.grid {
+	display: table;
+}
+
+.grid h4 {
+	margin-top: 0;
+}
+
+.column_1 {
+	width: 66%;
+	display: table-cell;
+	vertical-align: top;
+	padding: 20px;
+}
+
+.column_1 img {
+	width: 100%;
+}
+
+.column_2 {
+	width: 33%;
+	display: table-cell;
+	padding: 20px;
+	vertical-align: top;
+}
+
+.column_2 ul {
+	margin-top: 0;
+}
