@@ -24,7 +24,7 @@ function About() {
         <section>
           <h2>What is LibreNews?</h2>
 
-          <p>"Libre" is a term borrowed from French and Latin languages, meaning "at liberty, free, or unrestricted". The goal of LibreNews is to provide a reliable source for the latest breaking news headlines without any unnecessary obstacles or hinderances.</p>
+          <p>&quot;Libre&quot; is a term borrowed from French and Latin languages, meaning &quot;at liberty, free, or unrestricted&quot;. The goal of LibreNews is to provide a reliable source for the latest breaking news headlines without any unnecessary obstacles or hinderances.</p>
 
           <p>LibreNews aims to be the fastest and most streamlined method for finding this information.</p>
         </section>
