@@ -12,7 +12,9 @@ export default function TopStories ({stories}) {
 			<div className={styles.column_2}>
 				<ul>
 					{ stories.slice(1).map(story => (
-						<HeadlineItem headline={story} />
+						<HeadlineItem 
+						 	key={story.id}
+							headline={story} />
 					)) }
 				</ul>
 			</div>
