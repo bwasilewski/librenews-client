@@ -4,6 +4,7 @@ import Headlines from '../components/headlines'
 import TopStories from '../components/topstories'
 import styles from '../styles/Home.module.css'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
+import classNames from 'classnames'
 
 function Home({ headlines, top }) {
   const { trackPageView } = useMatomo()
@@ -22,10 +23,10 @@ function Home({ headlines, top }) {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <div className={styles.column_1}>
+          <div className={classNames(styles.column_1, styles.column)}>
             <Headlines headlines={headlines} />
           </div>
-          <div className={styles.column_2}>
+          <div className={classNames(styles.column_2, styles.column)}>
             <h2>Top Stories</h2>
             <TopStories stories={top} />
           </div>
