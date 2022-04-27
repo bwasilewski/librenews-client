@@ -1,8 +1,9 @@
 .footer {
-  position: sticky;
+  position: absolute;
   padding: 10px;
   bottom: 0;
   z-index: 2;
+  width: 100%;
   background-color: var(--background);
   text-align: center;
   border-top: 1px solid var(--bodytext);
