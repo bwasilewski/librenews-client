@@ -9,6 +9,8 @@ export default function Headlines ({ headlines }) {
 					<HeadlineItem 
 						key={headline.id} 
 						headline={headline}
+						showCategory={true}
+						showSource={true}
 					/>
 				))}
 			</ul>
