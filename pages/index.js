@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 import classNames from 'classnames'
 
-function Home({ headlines, top }) {
+function Home({ headlines, top, error }) {
   const { trackPageView } = useMatomo()
 
   useEffect(() => {
@@ -22,29 +22,47 @@ function Home({ headlines, top }) {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.grid}>
-          <div className={classNames(styles.column_1, styles.column)}>
-            <Headlines headlines={headlines} />
+        { error === null && (
+          <div className={styles.grid}>
+            <div className={classNames(styles.column_1, styles.column)}>
+              { headlines && <Headlines headlines={headlines} />}
+            </div>
+            <div className={classNames(styles.column_2, styles.column)}>
+              { top && (
+                <>
+                  <h2>Top Stories</h2>
+                  <TopStories stories={top} />
+                </>
+              )}
+            </div>
           </div>
-          <div className={classNames(styles.column_2, styles.column)}>
-            <h2>Top Stories</h2>
-            <TopStories stories={top} />
-          </div>
-        </div>
+        )}
+        { error && (
+          <p>There was an error, please refresh the page.</p>
+        )}
       </main>
     </div>
   )
 }
 
 Home.getInitialProps = async (ctx) => {
-  const headlineResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/fetch?size=10`)
-  const topResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/top`)
+  try {
+    const headlineResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/fetch?size=10`)
+    const topResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/top`)
 
-  return { 
-    headlines: await headlineResponse.json(),
-    top: await topResponse.json()
+    return { 
+      error: null,
+      headlines: await headlineResponse.json(),
+      top: await topResponse.json()
+    }
+  } catch (error) {
+      return {
+        error: error,
+        headlines: null,
+        top: null,
+      }
   }
 }
 
