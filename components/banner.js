@@ -6,7 +6,7 @@ export default function Banner () {
 		<nav className={styles.banner}>
 			<ul>
 				<li>
-					<Link href="/">LibreNews</Link>
+					<Link shallow={true} href="/">LibreNews</Link>
 				</li>
 				<li>
 					<Link href="/about">About</Link>
