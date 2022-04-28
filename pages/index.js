@@ -40,24 +40,18 @@ function Home({ headlines, top, error }) {
   )
 }
 
-Home.getInitialProps = async (ctx) => {
-  try {
-    const headlineResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/fetch?size=10`)
-    const topResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/top`)
+export async function getServerSideProps(context) {
+  const headlineResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/fetch?size=10`)
+  const topResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/top`)
 
-    return { 
+  return { 
+    props: {
       error: null,
       headlines: await headlineResponse.json(),
       top: await topResponse.json()
     }
-  } catch (error) {
-      return {
-        error: error,
-        headlines: null,
-        top: null,
-      }
   }
 }
 
