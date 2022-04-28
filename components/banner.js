@@ -6,7 +6,7 @@ export default function Banner () {
 		<nav className={styles.banner}>
 			<ul>
 				<li>
-					<Link shallow={true} href="/">LibreNews</Link>
+					<Link prefetch={true} href="/">LibreNews</Link>
 				</li>
 				<li>
 					<Link href="/about">About</Link>
