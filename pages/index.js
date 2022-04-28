@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Headlines from '../components/headlines'
 import TopStories from '../components/topstories'
+import TopStory from '../components/topstory'
 import styles from '../styles/Home.module.css'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 import classNames from 'classnames'
@@ -22,24 +23,18 @@ function Home({ headlines, top, error }) {
       </Head>
 
       <main className={styles.main}>
-        { error === null && (
-          <div className={styles.grid}>
-            <div className={classNames(styles.column_1, styles.column)}>
-              { headlines && <Headlines headlines={headlines} />}
-            </div>
-            <div className={classNames(styles.column_2, styles.column)}>
-              { top && (
-                <>
-                  <h2>Top Stories</h2>
-                  <TopStories stories={top} />
-                </>
-              )}
-            </div>
+        <div className={styles.grid}>
+          <div className={classNames(styles.column_1, styles.column)}>
+            { headlines && <Headlines headlines={headlines} />}
           </div>
-        )}
-        { error && (
-          <p>There was an error, please refresh the page.</p>
-        )}
+          <div className={classNames(styles.column_2, styles.column)}>
+            <h2>Top Stories</h2>
+            <TopStory story={top[0]} />
+          </div>
+          <div className={classNames(styles.column_3, styles.column)}>
+            <TopStories stories={top.slice(1, top.length)} />
+          </div>
+        </div>
       </main>
     </div>
   )

@@ -1,31 +1,43 @@
 import Link from 'next/link'
-import moment from 'moment'
+import PublishDate from './publishdate'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 
-export default function HeadlineItem ({headline}) {
+export default function HeadlineItem ({headline, showCategory, showSource}) {
 	const { trackEvent } = useMatomo()
+	const {
+		category,
+		description,
+		link,
+		pubDate,
+		source_id,
+		title,
+	} = headline
 
-	const handleClick = ev => {
-		// console.log(ev)
-		trackEvent({ category: 'headline', action: 'headline-click' })
-	}
+	const handleClick = () => trackEvent({ 
+		category: 'headline', 
+		action: 'headline-click' 
+	})
 
 	return (
 		<li>
 			<a 
 				onClick={handleClick} 
-				title={headline.description} 
-				href={headline.link} rel="noreferrer" target="_blank">{headline.title}
+				title={description} 
+				href={link} rel="noreferrer" target="_blank">{title}
 			</a>
 
-			<small>
-				<em>
-					{moment(headline.pubDate).format('MMMM Do YYYY, h:mm:ss')}
-				</em>
-			</small>
+			<PublishDate date={pubDate} format={'MMMM Do YYYY, h:mm:ss'} />
 
-			{ headline.category.map(category => (
-				<small key={category}>[<Link href={`/category/${category}`}>{category}</Link>]</small>
+			{ showSource && (
+				<small>
+					<em>
+						[{source_id}]
+					</em>
+				</small>
+			)}
+
+			{ showCategory && category.map(cat => (
+				<small key={cat}>[<Link href={`/category/${cat}`}>{cat}</Link>]</small>
 			))}
 		</li>
 	)

@@ -11,25 +11,34 @@
   padding: 6px;
 }
 
-.container {
-  padding: 0 2rem;
-}
-
 .grid {
-  display: table;
+  display: flex;
   width: 100%;
 }
 
-.column_1 {
-  display: table-cell;
-  width: 25%;
-  padding: 20px;
+.column {
+  width: 33%;
+  padding: 40px;
 }
 
-.column_2 {
-  display: table-cell;
-  width: 75%;
-  padding: 20px;
+.column h2 {
+  margin-top: 0;
+}
+
+.column_1 {
+  border-right: 1px solid var(--bodytext);
+}
+
+.column_1 h2 {
+  margin-bottom: 40px;
+}
+
+.column_3 ul {
+  margin-top: 69px;
+}
+
+.column img {
+  width: 100%;
 }
 
 .main {
@@ -39,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -99,14 +108,6 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
-  /* max-width: 800px; */
-}
-
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -157,16 +158,3 @@
   }
 
 }
-
-@media only screen and (min-width: 768px) {
-  .main {
-    padding: 2rem 0;
-  }
-
-  .main li > a {
-    /* white-space: nowrap; */
-    /* width: 700px; */
-    /* text-overflow: ellipsis; */
-    /* overflow: hidden; */
-  }
-} 
