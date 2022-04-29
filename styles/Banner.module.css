@@ -5,6 +5,7 @@
 	z-index: 2;
 	display: flex;
 	border-bottom: 1px solid var(--bodytext);
+	padding: 0 25px;
 }
 
 .banner ul {
@@ -13,6 +14,7 @@
 
 .banner	ul li {
 	font-weight: bold;
+	padding: 15px;
 }
 
 .bannerMobile {
@@ -22,16 +24,8 @@
 }
 
 @media (max-width: 768px) {
-	.banner {
-		padding: 0 2rem;
-	}
-
 	.banner ul {
 		overflow: hidden;
-	}
-
-	.banner ul li {
-		padding: 20px 0;
 	}
 
 	.bannerMobile {
@@ -41,11 +35,12 @@
 
 @media (max-width: 768px) {
 	.banner ul {
-		height: 63px;
+		height: 48px;
 	}
 }
 
 @media (min-width: 768px) {
+
 	.banner ul li {
 		display: inline-block;
 		width: auto;
