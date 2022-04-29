@@ -5,12 +5,10 @@ export default function Footer() {
 	const year = new Date().getFullYear()
 	return (
 		<footer className={styles.footer}>
-			<p>
-				<b>
-					&copy; {year}
-					<Link href="https://benwas.com">Benjamin Wasilewski</Link>
-				</b>
-			</p>
+			<b>
+				&copy; {year}
+				<Link href="https://benwas.com">Benjamin Wasilewski</Link>
+			</b>
 		</footer>
 	)
 }
