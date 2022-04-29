@@ -9,6 +9,9 @@ export default function Banner () {
 					<Link prefetch={true} href="/">LibreNews</Link>
 				</li>
 				<li>
+					<small><em>Free News Forever</em></small>
+				</li>
+				<li>
 					<Link href="/about">About</Link>
 				</li>
 				<li>
