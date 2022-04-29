@@ -6,7 +6,7 @@ export default function Banner () {
 		<nav className={styles.banner}>
 			<ul>
 				<li>
-					<Link prefetch={true} href="/">LibreNews</Link>
+					<Link href="/">LibreNews</Link>
 				</li>
 				<li>
 					<small><em>Free News Forever</em></small>
