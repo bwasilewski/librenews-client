@@ -15,7 +15,6 @@
   width: 100%;
 }
 
-
 .column h2 {
   margin-top: 0;
 }
@@ -28,9 +27,6 @@
   margin-bottom: 40px;
 }
 
-.column_3 ul {
-  margin-top: 69px;
-}
 
 .column img {
   width: 100%;
@@ -167,6 +163,10 @@
 
   .grid {
     display: flex;
+  }
+
+  .column_3 ul {
+    margin-top: 69px;
   }
 }
  
