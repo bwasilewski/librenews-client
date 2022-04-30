@@ -22,7 +22,7 @@ function About() {
 
       <main className={styles.main}>
         <section>
-          <h2>What is LibreNews?</h2>
+          <h1>What is LibreNews?</h1>
 
           <p>&quot;Libre&quot; is a term borrowed from French and Latin languages, meaning &quot;at liberty, free, or unrestricted&quot;. The goal of LibreNews is to provide a reliable source for the latest breaking news headlines without any unnecessary obstacles or hinderances.</p>
 
@@ -30,8 +30,10 @@ function About() {
         </section>
         <section>
           <h2>Who Made This?</h2>
-          <p>LibreNews.org is a personal project owned and maintained by myself, <Link href="https://benwas.com">Benjamin Wasilewski</Link>, a software engineer based in Southeastern Wisconsin. You can <Link href="mailto:benwasilewski@gmail.com">email me</Link> or check out my other work on <Link href="https://github.com/bwasilewski">GitHub.</Link></p>
+          <p>LibreNews.org is a personal project owned and maintained by myself, <Link href="https://benwas.com">Benjamin Wasilewski</Link>, a software engineer based in Southeastern Wisconsin. You can <Link href="mailto:benwasilewski@gmail.com">email me</Link> or check out my other work on <Link href="https://github.com/bwasilewski">GitHub</Link>.</p>
         </section>
+
+        <Link href="https://www.buymeacoffee.com/benwasilewski">Buy me a coffee</Link>
       </main>
 
     </div>
