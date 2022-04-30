@@ -1,0 +1,7 @@
+.category_list li {
+	display: inline-block;
+}
+
+.headline_list li {
+	display: block;
+}
