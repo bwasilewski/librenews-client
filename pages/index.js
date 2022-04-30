@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
+import Categories from '../components/categories'
 import Headlines from '../components/headlines'
 import TopStories from '../components/topstories'
 import TopStory from '../components/topstory'
@@ -7,7 +8,7 @@ import styles from '../styles/Home.module.css'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 import classNames from 'classnames'
 
-function Home({ headlines, top, error }) {
+function Home({ categories, headlines, top, error }) {
   const { trackPageView } = useMatomo()
 
   useEffect(() => {
@@ -36,7 +37,7 @@ function Home({ headlines, top, error }) {
             <TopStories stories={top.slice(1, top.length)} />
           </div>
           <div className={classNames(styles.grid_item, styles.grid_categories)}>
-            <p>Categories</p>
+            <Categories />
           </div>
         </div>
       </main>
