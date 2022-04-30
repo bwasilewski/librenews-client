@@ -24,15 +24,19 @@ function Home({ headlines, top, error }) {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <div className={classNames(styles.column_1, styles.column)}>
-            { headlines && <Headlines headlines={headlines} />}
-          </div>
-          <div className={classNames(styles.column_2, styles.column)}>
+          <div className={classNames(styles.grid_item, styles.grid_top_story)}>
             <h2>Top Stories</h2>
             <TopStory story={top[0]} />
           </div>
-          <div className={classNames(styles.column_3, styles.column)}>
+          <div className={classNames(styles.grid_item, styles.grid_headlines)}>
+            { headlines && <Headlines headlines={headlines} />}
+          </div>
+          <div className={
+            classNames(styles.grid_item, styles.grid_top_stories)}>
             <TopStories stories={top.slice(1, top.length)} />
+          </div>
+          <div className={classNames(styles.grid_item, styles.grid_categories)}>
+            <p>Categories</p>
           </div>
         </div>
       </main>
