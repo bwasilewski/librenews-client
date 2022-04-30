@@ -32,6 +32,10 @@
   width: 100%;
 }
 
+.grid {
+  padding: 40px;
+}
+
 .grid_top_story img {
   width: 100%;
 }
@@ -191,7 +195,6 @@
   .grid {
     display: grid;
     gap: 20px;
-    padding: 40px;
   }
 
   .grid_item {
