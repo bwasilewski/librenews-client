@@ -13,7 +13,7 @@ export default function Categories () {
 		}
 	}, [categories])
 
-	const handleClick = async ev => setCurrent(ev.target.innerText)
+	const handleClick = async ev => setCurrent(ev.target.innerText.toLowerCase())
 
 	return (
 		<>
@@ -31,7 +31,7 @@ export default function Categories () {
 							</li>
 						))}
 					</ul>
-					<CategoryHeadlines category={current} />
+					{ current && <CategoryHeadlines category={current} />}
 				</>
 			)}
 		</>

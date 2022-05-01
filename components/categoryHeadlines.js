@@ -14,6 +14,7 @@ export default function CategoryHeadlines ({ category }) {
 				<div className={styles.category_headlines}>
 					{ headlines && headlines.map(headline => 
 						<HeadlineItem 
+							key={headline.link}
 							headline={headline} 
 							showCategory={false} 
 							showSource={true} 
