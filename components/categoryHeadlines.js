@@ -4,9 +4,10 @@ import styles from '../styles/Categories.module.css'
 
 export default function CategoryHeadlines ({ category }) {
 	const { headlines, isLoading, isError } = useHeadlines(category)
+	const capitalized = category.charAt(0).toUpperCase() + category.slice(1)
 	return (
 		<>
-			<h3>{category}</h3>
+			<h3>{capitalized}</h3>
 			{ isLoading && <h3>Loading...</h3> }
 			{ isError && <h3>ERROR</h3> }
 			{ headlines && (

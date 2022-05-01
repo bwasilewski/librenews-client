@@ -13,12 +13,7 @@ export default function Categories () {
 		}
 	}, [categories])
 
-	const handleClick = async ev => {
-		// const response = await fetchCategoryHeadlines(ev.target.innerText)
-		// setCurrent(ev.target.innerText)
-		// setItems(response)
-		setCurrent(ev.target.innerText)
-	}
+	const handleClick = async ev => setCurrent(ev.target.innerText)
 
 	return (
 		<>
@@ -31,7 +26,7 @@ export default function Categories () {
 						{ categories.map(category => (
 							<li key={category}>
 								<button onClick={handleClick}>
-									{category}
+									{category.charAt(0).toUpperCase() + category.slice(1)}
 								</button>
 							</li>
 						))}
