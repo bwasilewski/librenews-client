@@ -1,7 +1,24 @@
+
+.category_list button {
+	background: none;
+	border: 1px solid var(--bodytext);
+	border-radius: 5px;
+	padding: 6px;
+}
+
 .category_list li {
 	display: inline-block;
 }
 
 .headline_list li {
 	display: block;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.category_headlines {
+		column-count: 2;
+		column-gap: 20px;
+	}
 }

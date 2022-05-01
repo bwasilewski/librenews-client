@@ -1,31 +1,23 @@
-import { useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import CategoryHeadlines from './categoryHeadlines'
+import useCategories from '../controllers/categories'
 import styles from '../styles/Categories.module.css'
-import HeadlineItem from './headlineitem'
-import useSWR from 'swr'
-
-const fetchURL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/headlines/categories`
-
-const fetchCategories = () => fetch(fetchURL)
-	.then(res => res.json())
-
-const useCategories = () => {
-	const { data, error } = useSWR(fetchURL, fetchCategories)
-
-	return {
-		categories: data,
-		isLoading: !error && !data,
-		isError: error
-	}
-}
 
 export default function Categories () {
+	const [current, setCurrent] = useState(null)
 	const { categories, isLoading, isError } = useCategories()
+
+	useEffect(() => {
+		if ( categories ) {
+			setCurrent(categories[0])
+		}
+	}, [categories])
 
 	const handleClick = async ev => {
 		// const response = await fetchCategoryHeadlines(ev.target.innerText)
 		// setCurrent(ev.target.innerText)
 		// setItems(response)
+		setCurrent(ev.target.innerText)
 	}
 
 	return (
@@ -34,15 +26,18 @@ export default function Categories () {
 			{ isLoading && <h3>Loading...</h3> }
 			{ isError && <h3>ERROR</h3> }
 			{ categories && (
-				<ul className={styles.category_list}>
-					{ categories.map(category => (
-						<li key={category}>
-							<button onClick={handleClick}>
-								{category}
-							</button>
-						</li>
-					))}
-				</ul>
+				<>
+					<ul className={styles.category_list}>
+						{ categories.map(category => (
+							<li key={category}>
+								<button onClick={handleClick}>
+									{category}
+								</button>
+							</li>
+						))}
+					</ul>
+					<CategoryHeadlines category={current} />
+				</>
 			)}
 		</>
 	)
